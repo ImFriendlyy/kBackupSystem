@@ -1,0 +1,34 @@
+# Language: ru (Russian) or en (English)
+# Язык: ru (Русский) или en (Английский)
+language: ru
+#
+# set true to gate more information
+debug: true
+#
+# Worlds list for backup // Список миров для бекапа
+world-list:
+  - "world"
+  - "world_nether"
+  - "world_the_end"
+#
+# Backup types
+# Main-folder -> Main server folder // Главная папка -> Главная папка сервера
+# Plugin-folder -> Folder "backups" in plugin folder // Папка плагинов -> Папка «backups» в папке плагинов
+backup-type: Main-folder
+#
+# Time of backup // Время бекапа
+# Specify the exact number (minutes) in the format // Указывается строго число (минуты), в формате
+# Every N minutes // Каждые N минут.
+task-manager:
+  enabled: true
+  time: 60
+#
+# back up at plugin start // Бекап миров при запуске плагина
+# back up at plugin stop // Бекап миров при выключении плагина
+backup-in-start: true
+backup-in-stop: true
+#
+# days format // указывать в днях
+delete-old-backups:
+  enabled: true
+  max-backup-age: 7

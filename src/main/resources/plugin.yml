@@ -1,0 +1,18 @@
+name: kBackupSystem
+version: '1.0'
+main: vv0ta3fa9.plugin.kBackupSystem.kBackupSystem
+api-version: '1.16'
+load: STARTUP
+authors: [ vv0t3afa9 ]
+website: t.me/kapybarkaaa
+commands:
+  kbackupsystem:
+    description: Главная команда управления kBackupSystem
+    usage: /kbackupsystem <reload|start>
+    permission: kbackupsystem.admin
+    aliases:
+      - kbs
+      - backupsys
+      - backupsystem
+      - backup
+      - bs
