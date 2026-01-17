@@ -24,15 +24,12 @@ public class MessageManager {
         String fileName = "messages_" + language + ".yml";
         File messagesFile = new File(plugin.getDataFolder(), fileName);
 
-        // Create the file from resources if it doesn't exist
         if (!messagesFile.exists()) {
             plugin.saveResource(fileName, false);
         }
 
-        // Load the messages file
         messages = YamlConfiguration.loadConfiguration(messagesFile);
 
-        // Load defaults from jar
         InputStream defConfigStream = plugin.getResource(fileName);
         if (defConfigStream != null) {
             YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(
@@ -40,13 +37,6 @@ public class MessageManager {
             messages.setDefaults(defConfig);
         }
     }
-
-    /**
-     * Get a translated message by key
-     *
-     * @param key the message key
-     * @return the translated message, or the key if not found
-     */
     public String getMessage(String key) {
         if (messages == null) {
             return key;
@@ -54,13 +44,6 @@ public class MessageManager {
         return messages.getString(key, key);
     }
 
-    /**
-     * Get a translated message by key with replacements
-     *
-     * @param key the message key
-     * @param replacements key-value pairs for replacements (e.g., "{world}", "world_nether")
-     * @return the translated message with replacements
-     */
     public String getMessage(String key, Object... replacements) {
         String message = getMessage(key);
         
@@ -78,9 +61,6 @@ public class MessageManager {
         return message;
     }
 
-    /**
-     * Reload messages from file
-     */
     public void reload() {
         this.language = plugin.getConfigManager().getString("language", "ru");
         loadMessages();
