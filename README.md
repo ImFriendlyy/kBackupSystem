@@ -29,7 +29,7 @@
 <td width="50%">
 
  
-### 📌 Main idea
+### Main idea
 The plugin allows you to:
 - Automatically archive worlds at specified intervals
 - Save backups when starting and stopping the server
@@ -42,7 +42,7 @@ The plugin allows you to:
 </td>
 <td width="50%">
 
-### 🏆 Why is kBackupSystem better than others?
+### Why is kBackupSystem better than others?
 - Does not block the main thread
 - Supports multi-world servers
 - Has an auto-deletion system
@@ -59,7 +59,7 @@ The plugin allows you to:
 
 ---
 
-## 🚀 Plugin advantages1
+## Plugin advantages1
  1. Minimal load on the server
 
 All archiving is performed asynchronously, which eliminates lag and freezes of the main server tick.
@@ -76,7 +76,7 @@ The plugin saves:
 
 ---
 
-## 🧠 3. Smart task system
+## 3. Smart task system
 
 The built-in scheduler allows you to perform backups:
 
@@ -86,13 +86,13 @@ The built-in scheduler allows you to perform backups:
 
 ---
 
-## 🧹 4. Automatic deletion of old backups
+## 4. Automatic deletion of old backups
 
 The plugin automatically clears backups older than the specified number of days.
 
 ---
 
-## 📁 5. Two storage modes
+## 5. Two storage modes
 
 - Main-folder — in the server root
 
@@ -100,7 +100,7 @@ The plugin automatically clears backups older than the specified number of days.
 
 ---
 
-## 🧪 6. Detailed debug logging
+## 6. Detailed debug logging
 
 When debug: true, the plugin outputs:
 
@@ -112,20 +112,20 @@ When debug: true, the plugin outputs:
 
 ---
 
-## 🔧 7. Easy integration and customization
+## 7. Easy integration and customization
 
 Each method is structured, divided by managers, and called with a single command.
 
 ---
 
 
-## ⚡ 8. High ZIP speed
+## 8. High ZIP speed
 
 Optimized buffers (up to 16K) are used, which speeds up the archiving of large worlds.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 The plugin is configured via the `config.yml` file in the plugin folder:
 
@@ -174,7 +174,7 @@ delete-old-backups:
 ---
 
 
-## 📁 Archive structure
+## Archive structure
 
 Archive example:
 
