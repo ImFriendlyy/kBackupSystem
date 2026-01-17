@@ -23,8 +23,7 @@ public class ConfigManager {
             try {
                 plugin.saveResource("config.yml", false);
             } catch (Exception e) {
-                // Can't use messageManager here as it's not initialized yet
-                plugin.getLogger().warning("Не удалось сохранить config.yml: " + e.getMessage());
+                plugin.getLogger().warning("Do not can save config.yml: " + e.getMessage());
             }
         }
         if (configFile.exists()) {
