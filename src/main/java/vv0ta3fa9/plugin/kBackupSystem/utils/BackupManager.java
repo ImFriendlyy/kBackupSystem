@@ -95,10 +95,9 @@ public class BackupManager {
             if (debug) plugin.getLogger().info(plugin.getMessageManager().getMessage("debug.world_processed", 
                     "{world}", worldName));
 
-            // Переход к следующему миру с задержкой
             Bukkit.getScheduler().runTaskLater(plugin, () -> {
                 backupNextWorld(worlds, index + 1);
-            }, 40L); // Задержка между бэкапами: 2 секунды
+            }, 40L); 
         });
     }
 
@@ -178,15 +177,6 @@ public class BackupManager {
         }
     }
 
-    /**
-     * Рекурсивно добавляет файл/папку в ZipOutputStream.
-     *
-     * @param file      текущий файл или директория
-     * @param entryName относительный путь в архиве (должен заканчиваться '/' для директорий)
-     * @param zos       ZipOutputStream
-     * @param debug     флаг детального логирования
-     * @throws IOException
-     */
     private void zipDirectory(File file, String entryName, ZipOutputStream zos, boolean debug) throws IOException {
 
         if (file.isDirectory()) {
